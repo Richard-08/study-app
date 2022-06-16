@@ -1,9 +1,10 @@
 <script setup lang="ts">
-import TheWelcome from '@/components/TheWelcome.vue'
+import TheWelcome from "@/components/TheWelcome.vue";
 </script>
 
 <template>
-  <main>
+  <div>
+    <router-link to="/about">About</router-link>
     <TheWelcome />
-  </main>
+  </div>
 </template>

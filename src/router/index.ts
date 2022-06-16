@@ -42,6 +42,22 @@ const router = createRouter({
         },
       ],
     },
+    {
+      path: "/login",
+      name: "Login",
+      component: () => import("@/views/Login/index.vue"),
+      meta: {
+        title: "Login",
+      },
+    },
+    {
+      path: "/signup",
+      name: "Sign Up",
+      component: () => import("@/views/Signup/index.vue"),
+      meta: {
+        title: "Sign Up",
+      },
+    },
   ],
 });
 

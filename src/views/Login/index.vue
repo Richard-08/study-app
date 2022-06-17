@@ -3,27 +3,38 @@
     <el-card class="login__container">
       <h2 class="login__title">Log In</h2>
       <el-form :model="form" label-position="top" class="login__form">
-        <el-form-item label="Email">
+        <el-form-item label="Email" required>
           <el-input
             v-model="form.email"
             type="email"
             placeholder="Please input email"
+            size="large"
           />
         </el-form-item>
-        <el-form-item label="Password">
+        <el-form-item label="Password" required>
           <el-input
             v-model="form.password"
             type="password"
             placeholder="Please input password"
             show-password
+            size="large"
           />
         </el-form-item>
         <el-form-item>
-          <el-button type="primary" @click="onSubmit">Log In</el-button>
+          <el-button
+            type="primary"
+            style="width: 100%"
+            size="large"
+            @click="onSubmit"
+            >Log In</el-button
+          >
         </el-form-item>
-        <router-link to="/signup">
-          <el-link type="primary">Sign Up</el-link>
-        </router-link>
+        <footer class="login__footer">
+          Don't have an account?
+          <router-link to="/signup"
+            ><el-link type="primary">Sign Up here</el-link></router-link
+          >
+        </footer>
       </el-form>
     </el-card>
   </section>
@@ -64,6 +75,11 @@ const onSubmit = () => {
 
   &__form {
     width: 100%;
+  }
+
+  &__footer {
+    font-size: 14px;
+    text-align: center;
   }
 }
 </style>

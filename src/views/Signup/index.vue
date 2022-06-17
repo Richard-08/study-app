@@ -3,34 +3,46 @@
     <el-card class="register__container">
       <h2 class="register__title">Sign Up</h2>
       <el-form :model="form" label-position="top" class="register__form">
-        <el-form-item label="Username">
+        <el-form-item label="Username" required>
           <el-input
             v-model="form.username"
             type="text"
             placeholder="Please input username"
+            size="large"
           />
         </el-form-item>
-        <el-form-item label="Email">
+        <el-form-item label="Email" required>
           <el-input
             v-model="form.email"
             type="email"
             placeholder="Please input email"
+            size="large"
           />
         </el-form-item>
-        <el-form-item label="Password">
+        <el-form-item label="Password" required>
           <el-input
             v-model="form.password"
             type="password"
             placeholder="Please input password"
             show-password
+            size="large"
           />
         </el-form-item>
         <el-form-item>
-          <el-button type="primary" @click="onSubmit">Sign Up</el-button>
+          <el-button
+            type="primary"
+            style="width: 100%"
+            size="large"
+            @click="onSubmit"
+            >Sign Up</el-button
+          >
         </el-form-item>
-        <router-link to="/login">
-          <el-link type="primary">Log In</el-link>
-        </router-link>
+        <footer class="register__footer">
+          Already have an account?
+          <router-link to="/login"
+            ><el-link type="primary">Log In here</el-link></router-link
+          >
+        </footer>
       </el-form>
     </el-card>
   </section>
@@ -72,6 +84,11 @@ const onSubmit = () => {
 
   &__form {
     width: 100%;
+  }
+
+  &__footer {
+    font-size: 14px;
+    text-align: center;
   }
 }
 </style>

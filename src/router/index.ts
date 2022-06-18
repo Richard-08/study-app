@@ -35,7 +35,7 @@ const router = createRouter({
         {
           path: "/about/index",
           name: "About",
-          component: () => import("@/views/AboutView.vue"),
+          component: () => import("@/views/About.vue"),
           meta: {
             title: "About",
           },

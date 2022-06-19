@@ -1,9 +1,11 @@
 <template>
-  <Header />
-  <el-container>
+  <div class="layout">
     <Sidebar />
-    <Main />
-  </el-container>
+    <div class="layout__container">
+      <Header />
+      <Main />
+    </div>
+  </div>
 </template>
 
 <script setup lang="ts">
@@ -13,4 +15,13 @@ import Sidebar from "./components/Sidebar/index.vue";
 </script>
 
 <style lang="scss" scoped>
+.layout {
+  min-height: 100vh;
+  display: flex;
+
+  &__container {
+    flex: 1;
+    height: 100%;
+  }
+}
 </style>

@@ -16,7 +16,7 @@ const router = createRouter({
         {
           path: "home",
           name: "Home",
-          component: () => import("@/views/HomeView.vue"),
+          component: () => import("@/views/Home/index.vue"),
           meta: {
             title: "Home",
           },
